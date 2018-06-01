@@ -1,0 +1,42 @@
+.site-info {
+    padding: 40px 30px 10px;
+    text-align: center;
+    @media screen and(min-width: 767px) {
+        text-align: initial;
+        margin-bottom: 15px;
+
+    }
+}
+
+.footer-menu {
+    margin-bottom: 20px;
+    @media screen and(min-width: 767px) {
+        float: right;
+        margin-bottom: 0;
+    }
+}
+
+#menu-footer-menu {
+    font-size: 14px;
+    @include reset-list;
+    li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    a {
+        @include link;
+        color: $dark-text-color;
+        border: none;
+        &:hover {
+            color: $accent-color;
+            border: none;
+        }
+    }
+    .current-menu-item,
+    .current_page_item {
+        a {
+            border-bottom: none;
+            color: $accent-color;
+        }
+    }
+}

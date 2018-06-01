@@ -1,0 +1,40 @@
+.summary_page {
+    background-color: $background-color;
+    padding-top: 50px;
+    @media screen and(min-width: 991px) {
+        padding-top: 100px;
+    }
+}
+
+.education {
+    @media screen and(min-width: 991px) {
+        width: 50%;
+        float: left;
+    }
+    a {
+        color: $dark-text-color;
+        &:hover,
+        &:focus,
+        &:visited {
+            color: $accent-color;
+        }
+    }
+}
+
+.post_img {
+    max-width: 470px;
+    margin: 0 auto;
+    @media screen and(min-width: 991px) {
+        width: 40%;
+        float: right;
+    }
+
+    img {
+        border: 6px double $accent-color;
+    }
+}
+
+.slider {
+    margin-top: 50px;
+    background-color: $accent-color;
+}

@@ -1,0 +1,123 @@
+.top_navigation {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: $main-light-color;
+    @media screen and(min-width: 767px) {
+        padding: 10px 50px;
+    }
+}
+
+.site-branding {
+    float: left;
+    img {
+        max-width: 113px;
+    }
+}
+
+.main_menu {
+    margin-top: 10px;
+    float: right;
+    .menu_toggle {
+        position: relative;
+        padding: 0;
+        color: $text-color;
+        @media screen and(min-width: 767px) {
+            display: none;
+        }
+        &:hover,
+        &:visited {
+            color: $text-color;
+        }
+    }
+
+    .on_active {
+        color: $accent-color;
+    }
+
+    a {
+        @include link;
+        @include transition;
+        padding: 10px 0;
+        font-weight: 600;
+        color: $text-color;
+        @media screen and(min-width: 767px) {
+            padding: 5px 10px;
+        }
+    }
+
+    .menu {
+        @include reset-list;
+        text-align: center;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: $main-light-color;
+        padding: 20px 0;
+        display: none;
+        @media screen and(min-width: 767px) {
+            text-align: initial;
+            background-color: transparent;
+            position: relative;
+            top: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        li {
+            @media screen and(min-width: 767px) {
+                display: inline-block;
+            }
+
+            a {
+                @include link;
+                @include transition;
+                box-sizing: border-box;
+                padding: 5px 15px;
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+        .current-menu-item,
+        .current_page_item {
+            a {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+/*Main Banner*/
+.main_banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_headline {
+    margin-top: 30px;
+}
+
+/******
+.mask {
+    background-color: rgba(64, 64, 64, 0.5);
+    height: 100vh;
+}
+*/
+
+/*
+.main_headline {
+    margin-top: 80px;
+    @media screen and(min-width: 767px) {
+        margin-top: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}*/

@@ -1,0 +1,198 @@
+section {
+    padding: 50px 0;
+    @media screen and(min-width: 767px) {
+        padding: 80px 0;
+    }
+}
+
+.headline {
+    h2 {
+        margin: 0 0 40px 0;
+        display: inline-block;
+        padding: 0 30px;
+        border-bottom: 3px solid $accent-color;
+    }
+}
+
+/*Section About Me*/
+.text_part {
+    @media screen and(min-width: 991px) {
+        width: 50%;
+        float: left;
+        padding: 0 40px;
+    }
+}
+
+.img_part {
+    @media screen and(min-width: 991px) {
+        width: 50%;
+        float: right;
+        .img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/*Section my skills*/
+.skills_section {
+    background-color: $accent-color;
+    @media screen and(min-width: 767px) {
+        padding: 70px 0;
+    }
+}
+
+.skills_list {
+    @include reset-list;
+    margin-top: 20px;
+
+    @media screen and(min-width: 991px) {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 250px;
+    }
+}
+
+.skill {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and(min-width: 991px) {
+        padding: 0 40px;
+        box-sizing: border-box;
+        width: 50%;
+    }
+}
+
+.value {
+    background-color: #bcbab9;
+    border: 3px solid #bcbab9;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.progress {
+    height: 20px;
+    background-color: $main-light-color;
+}
+
+/*Section last works*/
+.last_work {
+    text-align: center;
+
+    .container {
+        max-width: 1349px;
+        padding: 0;
+    }
+
+    a.button {
+        margin-top: 50px;
+        color: $main-light-color;
+        font-weight: 600;
+        &:hover {
+            background-color: transparent;
+            color: $accent-color;
+            border-color: $accent-color;
+        }
+    }
+}
+
+.my_work {
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    @media screen and(min-width: 767px) {
+        width: 50%;
+        float: left;
+    }
+    @media screen and(min-width: 991px) {
+        width: 25%;
+        margin-bottom: 0;
+    }
+}
+
+/*Sections Contacts*/
+.contacts {
+    .container {
+        @media screen and(min-width: 767px) {
+            padding: 0 80px;
+        }
+    }
+
+    h2 {
+        border: none;
+    }
+
+    .social_networks {
+        @include reset-list;
+        li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        a {
+            @include link;
+            @include transition;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: $accent-color;
+            border-radius: 50%;
+            &:hover {
+                cursor: pointer;
+                @include rotate;
+            }
+        }
+        .fa {
+            color: $main-light-color;
+            font-size: 26px;
+        }
+    }
+}
+
+.info_block {
+    @media screen and(min-width: 767px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+}
+
+.info,
+.contact_form {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    padding: 30px 20px;
+    width: 100%;
+    @media screen and(min-width: 767px) {
+        width: 45%;
+        padding: 30px;
+    }
+}
+
+.info {
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and(min-width: 767px) {
+        align-items: flex-start;
+        margin-bottom: 0;
+        text-align: initial;
+        padding-left: 30px;
+    }
+}
+
+.contuct_list {
+    @include reset-list;
+    margin-bottom: 25px;
+}
+

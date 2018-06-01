@@ -1,0 +1,28 @@
+input[type="submit"],
+.over_button,
+.button {
+    @include link;
+    @include transition;
+    text-transform: uppercase;
+    line-height: 50px;
+    padding: 0 30px;
+    background-color: $accent-color;
+    border: 2px solid $accent-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    line-height: 40px;
+    color: $main-light-color;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+
+}

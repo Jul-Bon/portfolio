@@ -1,0 +1,25 @@
+@mixin reset-list() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+@mixin transition() {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+@mixin rotate {
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

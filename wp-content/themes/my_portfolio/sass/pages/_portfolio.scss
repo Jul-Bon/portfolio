@@ -1,0 +1,55 @@
+.portfolio {
+    background-color: $background-color;
+    padding: 50px 0 20px;
+    box-sizing: border-box;
+    @media screen and(min-width: 767px) {
+        padding: 100px 0 50px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.work_list {
+    max-width: 650px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    margin: 0 auto 50px;
+    box-shadow: 0 0 60px #8d96b9;
+    text-align: center;
+    @media screen and(min-width: 991px) {
+        width: 47%;
+        margin-bottom: 60px;
+        &:nth-of-type(even) {
+            float: right;
+        }
+        &:nth-of-type(odd) {
+            float: left;
+        }
+    }
+    @media screen and(min-width: 767px) {
+        margin-bottom: 80px;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: $accent-color;
+    }
+
+    .work_link {
+        a {
+            color: #404040;
+            &:hover,
+            &:focus,
+            &:active {
+                color: $light-text-color;
+            }
+        }
+    }
+}
+
+.work_headline {
+    padding: 0 20px;
+}
+

@@ -1,0 +1,35 @@
+.page_pagination {
+    clear: both;
+    text-align: center;
+}
+
+.page_pagination,
+.page_navigation {
+    margin-top: 40px;
+    text-align: center;
+
+    .nav-links,
+    .wp-pagenavi {
+        a, span {
+            @include link;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            color: $text-color;
+            font-weight: 600;
+            border: 2px solid transparent;
+            line-height: 1;
+            &:hover,
+            &:focus {
+                color: $dark-text-color;
+                border-color: $accent-color
+            }
+            &:visited {
+                color: $dark-text-color;
+            }
+        }
+        span.current {
+            border: 2px solid $accent-color;
+            color: #676565;
+        }
+    }
+}

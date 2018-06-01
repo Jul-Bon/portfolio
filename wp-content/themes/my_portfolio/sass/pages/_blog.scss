@@ -1,0 +1,152 @@
+.content_blog {
+    padding: 50px 0;
+    box-sizing: border-box;
+    border-bottom: 2px solid $accent-color;
+    @media screen and(min-width: 991px) {
+        padding: 100px 0 50px;
+    }
+
+    .container {
+        padding: 0 20px;
+        @media screen and(min-width: 991px) {
+            padding: 0 80px;
+        }
+    }
+}
+
+.blog_banner {
+    height: 50vh;
+}
+
+.blog_list {
+    @include reset-list;
+
+    article {
+        margin: 0;
+    }
+}
+
+.post_part {
+    box-shadow: 0 12px 40px rgba(104, 86, 42, 0.1);
+}
+
+.post_description {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: $main-light-color;
+    @media screen and(min-width: 991px) {
+        float: left;
+        width: 47%;
+        margin-right: 6%;
+        margin-bottom: 30px;
+        position: relative;
+        @include transition;
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            .overlay {
+                display: flex;
+            }
+            .content_part {
+                background-color: rgba(153, 153, 153, 0.15);
+                &:before {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.post-img {
+    position: relative;
+    img {
+        max-width: 100%;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: $main-light-color;
+        font-weight: 600;
+        &:hover {
+            background-color: transparent;
+            color: $accent-color;
+            border-color: $accent-color;
+        }
+    }
+}
+
+.content_part {
+    padding: 20px 30px;
+    color: $text-color;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border: 20px solid transparent;
+        border-bottom: 20px solid rgba(153, 153, 153, 0.15);
+        display: none;
+    }
+
+    h2 {
+        border-bottom: 2px solid $accent-color;
+        display: inline-block;
+    }
+
+    a {
+        @include link;
+        @include transition;
+        color: $text-color;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+.post-categories {
+    @include reset-list;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        &:after {
+            content: '|';
+            display: inline-block;
+        }
+        &:last-child {
+            &:after {
+                content: none;
+            }
+        }
+        a {
+            padding-right: 5px;
+            color: $light-text-color;
+            &:hover,
+            &:focus,
+            &:active {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+.entry-content {
+    margin: 0;
+    text-align: justify;
+}

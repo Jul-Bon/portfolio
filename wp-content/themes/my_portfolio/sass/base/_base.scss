@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    @media screen and(min-width: 320px) {
+
+    }
+
+    @media screen and(min-width: 767px) {
+        padding: 0 30px;
+    }
+
+    @media screen and(min-width: 991px) {
+
+    }
+
+    @media screen and(min-width: 1119px) {
+        max-width: 1200px;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    display: inline-block;
+    &:visited {
+        color: $text-color;
+    }
+}
+

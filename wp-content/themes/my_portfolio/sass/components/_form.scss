@@ -1,0 +1,24 @@
+.contact_form {
+    .wpcf7-form {
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 20px 15px 10px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            padding: 20px 15px;
+            resize: none;
+            height: 120px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border: none;
+            border-bottom: 2px solid $accent-color;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
